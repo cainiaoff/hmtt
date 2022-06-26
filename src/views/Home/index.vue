@@ -1,6 +1,10 @@
 <template>
   <div>
-    <router-view></router-view>
+    <van-search
+      shape="round"
+      background="#3296fa"
+      placeholder="请输入搜索关键词"
+    />
   </div>
 </template>
 
@@ -19,4 +23,9 @@ export default {
 </script>
 
 <style scoped lang='less'>
+/deep/ .van-search__content {
+  width: 555px;
+  height: 64px;
+  background-color: #ffffff;
+}
 </style>
