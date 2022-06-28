@@ -26,7 +26,8 @@ const routes = [
       },
       {
         path: 'my',
-        component: My
+        component: My,
+        name: 'my'
       }
     ]
   },

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登陆">
+    <van-nav-bar title="登陆" @click-left="$router.back()">
       <van-icon name="cross" slot="left" />
     </van-nav-bar>
     <template>
@@ -79,6 +79,7 @@ export default {
       try {
         const res = await login(values)
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'my' })
       } catch (err) { console.log(err) }
     },
     async onSendSms () {
